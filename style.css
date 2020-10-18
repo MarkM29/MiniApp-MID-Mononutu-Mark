@@ -1,0 +1,34 @@
+
+.css-ungu{
+    background-color: slateblue;
+    color: snow;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: 65% 35%;
+}
+
+.margin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Lebar{
+    width: 100%;
+}
+
+.judul{
+    font-weight: 200;
+    font-size: 60px;
+    color: grey;
+}
+
+#footer{
+    width: auto;
+    height:60px;
+    background-color: slateblue;
+    color:white;
+    text-align: center;
+
+}

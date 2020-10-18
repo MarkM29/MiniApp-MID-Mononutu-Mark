@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="MarkM" />
+    <meta name="keywords" content="html,css,javascript, mid,studentminiapp, front-end, unklab, fik, universitas, klabat, informatika" />
+    <meta name="description" content="website ini dibuat untuk Tugas Mid Front-End Web Developement" />
+
+    <!-- Menggunakan bootstrap library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" 
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <title>StudentListApp</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="css-ungu navbar navbar-expand-lg navbar-light p-3">
+        <a class="navbar-brand text-white" href="#">Student Management MiniApp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <!-- Navigation Bar -->
+    
+
+    <div class= "container">
+        <h1 class="judul">Student Management</h1> 
+        <h1 class="judul">MiniApp</h1>
+        <hr>    
+    </div>
+
+    <div class="grid container">
+
+      <!-- FORM SEBELAH KIRI -->
+        <div>
+            <h3>Add Student</h3>
+            <!-- Button Show Form add New Student -->
+            <button class=" css-ungu p-2 margin" type="button">Show Form Add New Student</button>
+            <form>
+              <!-- Textbox Student ID -->
+              <div class="form-group">
+                <label for="inputSudentID">Student ID (NIM)</label>
+                <input type="text" class="form-control" id="inputSudentID" placeholder="105021810053">
+                <!-- <small id="emailHelp" class="Tidak boleh kosong.</small> -->
+              </div>
+              <!-- Textbox FullName -->
+              <div class="form-group">
+                <label for="inputFullName">Full Name</label>
+                <input type="text" class="form-control" id="inputFullName" placeholder="Mark Mononutu">
+              </div>
+              <!-- Radio Button Gender -->
+              <div class="form-group">
+                <label>Gender</label><br>
+                <input type="radio" id="male" name="gender">
+                <label for="male">Male</label> <br>
+                <input type="radio" id="female" name="gender">
+                <label for="female">Female</label>
+              </div>
+              <!-- SelectBox Faculty -->
+              <div>
+                <label>Faculty</label><br>
+                <select class="custom-select">
+                  <option value="">-- SELECT FACULTY --</option>
+                  <option value="pascaSarjana">Pascasarjana</option>
+                  <option value="fakultasFilsafat">Fakultas Filsafat</option>
+                  <option value="fkip">Fakultas Keguruan dan Ilmu Pendidikan</option>
+                  <option value="fekon">Fakultas Ekonomi dan Bisnis</option>
+                  <option value="pertanian">Fakultas Pertanian</option>
+                  <option value="fik">Fakultas Ilmu Komputer</option>
+                  <option value="keperawatan">Fakultas Keperawatan</option>
+                  <option value="asmi">Akademi Sekretari Manajemen Indonesia Klabat</option>
+
+                </select>
+              </div>
+              <!-- SelectBox Program of Study  -->
+              <div>
+                <label>Program Study</label><br>
+                <select class="custom-select">
+                  <option value="">-- SELECT PROGRAM OF STUDY --</option>
+               
+                </select>
+              </div>
+                <!-- Button Add Student -->
+              <div>
+                <button class=" css-ungu margin Lebar p-2" type="submit">Add Student</button>
+
+              </div>
+              
+              
+            </form>
+        </div>
+        <!-- FORM SEBELAH KIRI -->
+            
+
+        <!-- FORM SEBELAH KANAN -->
+        <div class="container">
+          <h3>Filter Students By</h3>
+          <form>
+            <!-- SelectBox Faculty -->
+            <div>
+              <label>Faculty</label><br>
+              <select class="custom-select">
+                <option value="">-- SELECT FACULTY --</option>
+                <option value="pascaSarjana">Pascasarjana</option>
+                <option value="fakultasFilsafat">Fakultas Filsafat</option>
+                <option value="fkip">Fakultas Keguruan dan Ilmu Pendidikan</option>
+                <option value="fekon">Fakultas Ekonomi dan Bisnis</option>
+                <option value="pertanian">Fakultas Pertanian</option>
+                <option value="fik">Fakultas Ilmu Komputer</option>
+                <option value="keperawatan">Fakultas Keperawatan</option>
+                <option value="asmi">Akademi Sekretari Manajemen Indonesia Klabat</option>
+
+              </select>
+            </div>
+
+            <!-- Show Students -->
+            <div>
+              <button id="showButton1" class=" css-ungu margin Lebar p-2" type="button">Show Student</button>
+            </div>
+            
+            <!-- SelectBox Program of Study  -->
+            <div>
+              <label>Program Study</label><br>
+              <select class="custom-select">
+                <option value="">-- SELECT PROGRAM OF STUDY --</option>
+             
+              </select>
+            </div>
+
+            <!-- Show Students -->
+            <div>
+              <button id="showButton1" class=" css-ungu margin Lebar p-2" type="button">Show Student</button>
+            </div>
+
+          </form>
+        </div>
+    </div>
+
+    <!-- garis lurus -->
+    <div class="container">
+      <hr>
+    </div>
+
+    <!-- Title Our Student -->
+    <div>
+      <h1 class="judul text-center">Our Student</h1>
+     
+    <!-- Textbox Serach student name -->
+      <div class="form-group container">
+        <input type="text" class="form-control" id="searchStudentName" placeholder="Search student by name...">
+      </div>
+
+    </div>
+    
+    <!-- Tabel Mahasiswa -->
+    <table class="table container">
+      <thead>
+        <tr>
+          <th scope="col">Student ID (NIM)</th>
+          <th scope="col">Full Name</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Faculty</th>
+          <th scope="col">Program of Study</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>105021810053</td>
+          <td>Mark Mononutu</td>
+          <td>Male</td>
+          <td>Fakultas Ilmu Komputer</td>
+          <td>Informatika</td>
+          <td><i class="fas fa-user-minus bg-danger p-2"></i></td>
+        </tr>
+
+
+
+      </tbody>
+    </table>
+    
+
+  <footer id=footer>
+
+  
+
+  </footer>  
+
+    <script src="dom.js"></script>
+</body>
+
+</html>
