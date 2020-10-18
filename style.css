@@ -1,34 +1,81 @@
 
+/* Background ungu */
 .css-ungu{
     background-color: slateblue;
     color: snow;
 }
 
+/* Warna text ungu */
+.css-text-ungu{
+    color: slateblue;
+}
+
+/* Untuk membuat tampilan form menjadi grid kiri dan kanan */
 .grid{
     display:grid;
     grid-template-columns: 65% 35%;
 }
 
+/* Menambahkan margin untuk yang terlalu mepet */
 .margin{
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
+/* Membuat button lebar sampai full */
 .Lebar{
     width: 100%;
 }
 
+/* Mengatur ukuran,ketebalan, dan warna pada text judul */
 .judul{
     font-weight: 200;
     font-size: 60px;
     color: grey;
 }
 
-#footer{
+/* Membuat Footer di page about */
+#footerabout{
     width: auto;
     height:60px;
     background-color: slateblue;
     color:white;
     text-align: center;
+    margin-top: 62vh;
+    
+}
+
+/* Membaut footer di page Home */
+#footerhome{
+    width: auto;
+    height:60px;
+    background-color: slateblue;
+    color:white;
+    text-align: center;
+}
+
+/* Isi dari footer untuk baris pertama */
+ul#footercontent1 li{
+    display: inline;
+}
+
+/* Isi dari footer untuk baris keuda */
+ul#footercontent2 li{
+    display: inline;
 
 }
+
+/* Deskripsi pada about baris pertama */
+ul#aboutDescription li{
+    display: inline;
+}
+
+/* Background warna orange */
+.background-orange{
+    background-color: orangered;
+}
+
+
+
+
+
