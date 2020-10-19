@@ -51,13 +51,12 @@
         <div>
             <h3>Add Student</h3>
             <!-- Button Show Form add New Student -->
-            <button class=" css-ungu p-2 margin" type="button">Show Form Add New Student</button>
-            <form>
+            <button id="buttonShowAndHide" class=" css-ungu p-2 margin" type="button">Show Form Add New Student</button>
+            <form  id="formAddStudent">
               <!-- Textbox Student ID -->
               <div class="form-group">
                 <label for="inputSudentID">Student ID (NIM)</label>
-                <input type="text" class="form-control" id="inputSudentID" placeholder="105021810053">
-                <!-- <small id="emailHelp" class="Tidak boleh kosong.</small> -->
+                <input type="text" class="form-control" id="inputSudentID" placeholder="105021810053">  
               </div>
               <!-- Textbox FullName -->
               <div class="form-group">
@@ -75,31 +74,22 @@
               <!-- SelectBox Faculty -->
               <div>
                 <label>Faculty</label><br>
-                <select class="custom-select">
+                <select id= "selectFaculty" class="custom-select" name="selectFaculty" //onchange="populate(this.id,'selectPrody')" >
                   <option value="">-- SELECT FACULTY --</option>
-                  <option value="pascaSarjana">Pascasarjana</option>
-                  <option value="fakultasFilsafat">Fakultas Filsafat</option>
-                  <option value="fkip">Fakultas Keguruan dan Ilmu Pendidikan</option>
-                  <option value="fekon">Fakultas Ekonomi dan Bisnis</option>
-                  <option value="pertanian">Fakultas Pertanian</option>
-                  <option value="fik">Fakultas Ilmu Komputer</option>
-                  <option value="keperawatan">Fakultas Keperawatan</option>
-                  <option value="asmi">Akademi Sekretari Manajemen Indonesia Klabat</option>
-
-                </select>
+                  
+                </select >
               </div>
               <!-- SelectBox Program of Study  -->
               <div>
                 <label>Program Study</label><br>
-                <select class="custom-select">
-                  <option value="">-- SELECT PROGRAM OF STUDY --</option>
-               
+                <select id="selectPrody" class="custom-select">
+                  <option value="">-- SELECT FACULTY --</option>
                 </select>
               </div>
                 <!-- Button Add Student -->
               <div>
                 <button class=" css-ungu margin Lebar p-2" type="submit">Add Student</button>
-
+                
               </div>
               
               
@@ -139,6 +129,21 @@
               <label>Program Study</label><br>
               <select class="custom-select">
                 <option value="">-- SELECT PROGRAM OF STUDY --</option>
+                <option value="agroteknologi">Agroteknologi</option>
+                <option value="akuntansi">Akuntansi</option>
+                <option value="ilmuFilsafat">Ilmu Filsafat</option>
+                <option value="informatika">Informatika</option>
+                <option value="keperawatan">Keperawatan</option>
+                <option value="magisterManagement">Magister Manajemen</option>
+                <option value="magisterTeologi">Magister Teologi</option>
+                <option value="manajemen">Manajemen</option>
+                <option value="pendidikanAgama">Pendidikan Agama</option>
+                <option value="pendidikanBahasaInggris">Pendidikan Bahasa Inggris</option>
+                <option value="pendidikanEkonomi">Pendidikan Ekonomi</option>
+                <option value="pendidikanLuarSekolah">Pendidikan Luar Sekolah</option>
+                <option value="profesiNers">Profesi Ners</option>
+                <option value="sekretari">Sekretari (D3)</option>
+                <option value="sistemInformasi">Sistem Informasi</option>
              
               </select>
             </div>
@@ -180,7 +185,7 @@
           <th scope="col">Action</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="table-column">
 
         <tr>
           <td>105021810053</td>
