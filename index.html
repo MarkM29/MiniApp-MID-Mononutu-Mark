@@ -66,29 +66,29 @@
               <!-- Radio Button Gender -->
               <div class="form-group">
                 <label>Gender</label><br>
-                <input type="radio" id="male" name="gender" value="male">
+                <input type="radio" id="male" name="gender" value="Male">
                 <label for="male">Male</label> <br>
-                <input type="radio" id="female" name="gender" value="female">
+                <input type="radio" id="female" name="gender" value="Female">
                 <label for="female">Female</label>
               </div>
               <!-- SelectBox Faculty -->
               <div>
                 <label>Faculty</label><br>
-                <select id= "selectFaculty" class="custom-select" name="selectFaculty" //onchange="populate(this.id,'selectPrody')" >
-                  <option value="">-- SELECT FACULTY --</option>
-                  
+                <select id= "selectFaculty" class="custom-select" >
+                  <option>-- SELECT FACULTY --</option>
+          
                 </select >
               </div>
               <!-- SelectBox Program of Study  -->
               <div>
                 <label>Program Study</label><br>
                 <select id="selectPrody" class="custom-select">
-                  <option value="">-- SELECT FACULTY --</option>
+                  <option>-- SELECT PROGRAM OF STUDY --</option>
                 </select>
               </div>
                 <!-- Button Add Student -->
               <div>
-                <button class=" css-ungu margin Lebar p-2" type="submit">Add Student</button>
+                <button id="buttonAddStudent" class=" css-ungu margin Lebar p-2" type="button">Add Student</button>
                 
               </div>
               
@@ -105,52 +105,52 @@
             <!-- SelectBox Faculty -->
             <div>
               <label>Faculty</label><br>
-              <select class="custom-select">
+              <select id= "filterByFaculty" class="custom-select">
                 <option value="">-- SELECT FACULTY --</option>
-                <option value="pascaSarjana2">Pascasarjana</option>
-                <option value="fakultasFilsafat2">Fakultas Filsafat</option>
-                <option value="fkip2">Fakultas Keguruan dan Ilmu Pendidikan</option>
-                <option value="fekon2">Fakultas Ekonomi dan Bisnis</option>
-                <option value="pertanian2">Fakultas Pertanian</option>
-                <option value="fik2">Fakultas Ilmu Komputer</option>
-                <option value="keperawatan2">Fakultas Keperawatan</option>
-                <option value="asmi2">Akademi Sekretari Manajemen Indonesia Klabat</option>
+                <option>Pascasarjana</option>
+                <option>Fakultas Filsafat</option>
+                <option>Fakultas Keguruan dan Ilmu Pendidikan</option>
+                <option>Fakultas Ekonomi dan Bisnis</option>
+                <option>Fakultas Pertanian</option>
+                <option>Fakultas Ilmu Komputer</option>
+                <option>Fakultas Keperawatan</option>
+                <option>Akademi Sekretari Manajemen Indonesia Klabat</option>
 
               </select>
             </div>
 
             <!-- Show Students -->
             <div>
-              <button id="showButton1" class=" css-ungu margin Lebar p-2" type="button">Show Student</button>
+              <button id="showButton1" class=" css-ungu margin Lebar p-2" type="button" onclick="filterFaculty()">Show Student</button>
             </div>
             
             <!-- SelectBox Program of Study  -->
             <div>
               <label>Program Study</label><br>
-              <select class="custom-select">
-                <option value="">-- SELECT PROGRAM OF STUDY --</option>
-                <option value="agroteknologi">Agroteknologi</option>
-                <option value="akuntansi">Akuntansi</option>
-                <option value="ilmuFilsafat">Ilmu Filsafat</option>
-                <option value="informatika">Informatika</option>
-                <option value="keperawatan">Keperawatan</option>
-                <option value="magisterManagement">Magister Manajemen</option>
-                <option value="magisterTeologi">Magister Teologi</option>
-                <option value="manajemen">Manajemen</option>
-                <option value="pendidikanAgama">Pendidikan Agama</option>
-                <option value="pendidikanBahasaInggris">Pendidikan Bahasa Inggris</option>
-                <option value="pendidikanEkonomi">Pendidikan Ekonomi</option>
-                <option value="pendidikanLuarSekolah">Pendidikan Luar Sekolah</option>
-                <option value="profesiNers">Profesi Ners</option>
-                <option value="sekretari">Sekretari (D3)</option>
-                <option value="sistemInformasi">Sistem Informasi</option>
+              <select id="filterByPrody" class="custom-select">
+                <option>-- SELECT PROGRAM OF STUDY --</option>
+                <option>Agroteknologi</option>
+                <option>Akuntansi</option>
+                <option>Ilmu Filsafat</option>
+                <option>Informatika</option>
+                <option>Keperawatan</option>
+                <option>Magister Manajemen</option>
+                <option>Magister Teologi</option>
+                <option>Manajemen</option>
+                <option>Pendidikan Agama</option>
+                <option>Pendidikan Bahasa Inggris</option>
+                <option>Pendidikan Ekonomi</option>
+                <option>Pendidikan Luar Sekolah</option>
+                <option>Profesi Ners</option>
+                <option>Sekretari (D3)</option>
+                <option>Sistem Informasi</option>
              
               </select>
             </div>
 
             <!-- Show Students -->
             <div>
-              <button id="showButton2" class=" css-ungu margin Lebar p-2" type="button">Show Student</button>
+              <button id="showButton2" class=" css-ungu margin Lebar p-2" type="button" onclick="filterPrody()">Show Student</button>
             </div>
 
           </form>
@@ -168,7 +168,7 @@
      
     <!-- Textbox Serach student name -->
       <div class="form-group container">
-        <input type="text" class="form-control" id="searchStudentName" placeholder="Search student by name...">
+        <input type="text" class="form-control" id="searchStudentName" placeholder="Search student by name..." oninput="searching()">
       </div>
 
     </div>
@@ -187,14 +187,7 @@
       </thead>
       <tbody id="table-column">
 
-        <tr>
-          <td>105021810053</td>
-          <td>Mark Mononutu</td>
-          <td>Male</td>
-          <td>Fakultas Ilmu Komputer</td>
-          <td>Informatika</td>
-          <td><i class="fas fa-user-minus bg-danger p-2"></i></td>
-        </tr>
+        
 
 
 
